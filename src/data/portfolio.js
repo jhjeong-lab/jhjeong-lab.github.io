@@ -13,7 +13,7 @@ export const portfolioData = {
     badges: ['Math', 'RAG Systems', 'AI Agents', 'Machine Learning', 'Deep Learning'],
   },
   about: {
-    title: '도메인 데이터를 해석하고 시스템으로 연결합니다.',
+    title: '데이터를 이해하고, 의미 있는 정보를 이끌어냅니다.',
     description:
       '저는 특정 도메인의 데이터에 수학적 방법론을 적용하여 데이터의 구조를 해석하고, 그로부터 의미 있는 정보를 추출하는 데 관심이 있습니다. 이러한 분석적 기반 위에서 RAG, AI Agent, 모델 최적화 같은 시스템을 설계하고 구현해왔습니다.',
     highlights: [
