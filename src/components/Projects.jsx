@@ -31,6 +31,13 @@ function Projects({ items }) {
                 </p>
                 <p>{project.summary}</p>
 
+                {project.myRole ? (
+                  <div className="project-role">
+                    <p className="project-role__label">My Role</p>
+                    <p className="project-role__value">{project.myRole}</p>
+                  </div>
+                ) : null}
+
                 <div className="project-sections">
                   <div className="project-section">
                     <h4>배경</h4>

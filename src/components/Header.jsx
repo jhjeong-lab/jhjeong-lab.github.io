@@ -2,7 +2,7 @@ const navItems = [
   { label: 'About Me', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Training', href: '#training' },
 ];
 
 function Header({ name, githubUrl }) {

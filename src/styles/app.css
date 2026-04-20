@@ -126,8 +126,7 @@
 
 .hero-intro,
 .section-description,
-.project-card p,
-.contact-email {
+.project-card p {
   margin: 0;
   max-width: 40rem;
   font-size: 1rem;
@@ -143,8 +142,7 @@
   color: var(--color-text);
 }
 
-.hero-actions,
-.contact-links {
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -416,6 +414,57 @@
   margin: 0;
 }
 
+.project-role {
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--color-accent);
+  background: #f8faf8;
+  border-radius: 0 8px 8px 0;
+}
+
+.project-role__label {
+  margin: 0 0 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+}
+
+.project-role__value {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--color-text-strong);
+  word-break: keep-all;
+}
+
+.training-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.training-item {
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(17, 20, 21, 0.08);
+  border-radius: 8px;
+  background: #ffffff;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.training-item h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  color: var(--color-text-strong);
+}
+
+.training-item p {
+  margin: 0;
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
 .project-sections {
   display: grid;
   gap: 1rem;
@@ -456,58 +505,6 @@
   border-radius: 8px;
   background: #f5f7f5;
   font-size: 0.92rem;
-  color: var(--color-text-strong);
-}
-
-.section-contact {
-  padding-bottom: 0;
-  border-top: 0;
-}
-
-.section-contact .section-copy {
-  max-width: 36rem;
-}
-
-.section-contact h2 {
-  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
-  line-height: 1.35;
-}
-
-.contact-band {
-  display: grid;
-  gap: 1.5rem;
-  padding: 2rem 1.25rem;
-  border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid rgba(17, 20, 21, 0.08);
-}
-
-.section-contact .section-label,
-.section-contact h2,
-.section-contact .section-description,
-.section-contact .contact-email {
-  color: var(--color-text-strong);
-}
-
-.section-contact .section-description,
-.section-contact .contact-email {
-  opacity: 1;
-}
-
-.contact-panel {
-  display: grid;
-  gap: 1rem;
-}
-
-.contact-email {
-  margin: 0;
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
-  font-weight: 600;
-}
-
-.section-contact .secondary-link {
-  border-color: rgba(17, 20, 21, 0.14);
-  background: #ffffff;
   color: var(--color-text-strong);
 }
 
@@ -552,11 +549,5 @@
 
   .project-card {
     padding: 1.5rem;
-  }
-
-  .contact-band {
-    grid-template-columns: minmax(22rem, 1.2fr) minmax(16rem, auto);
-    align-items: center;
-    padding: 2.5rem;
   }
 }
