@@ -47,6 +47,7 @@ export const portfolioData = {
   },
   skills: [
     'Python',
+    'Pytorch',
     'MATLAB',
     'SQL',
     'Transformers',
