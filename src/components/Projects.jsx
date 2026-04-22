@@ -6,7 +6,7 @@ function Projects({ items }) {
           <p className="section-label">프로젝트</p>
           <h2>주요 프로젝트</h2>
           <p className="section-description">
-            AI 시스템 설계, 모델 최적화, 연구 기반 문제 해결 경험을 중심으로 정리했습니다.
+            문제 구조를 다시 정의하고, 시스템 설계와 실험 검증으로 풀어낸 작업을 정리했습니다.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ function Projects({ items }) {
 
                 {project.myRole ? (
                   <div className="project-role">
-                    <p className="project-role__label">My Role</p>
+                    <p className="project-role__label">내 역할</p>
                     <p className="project-role__value">{project.myRole}</p>
                   </div>
                 ) : null}

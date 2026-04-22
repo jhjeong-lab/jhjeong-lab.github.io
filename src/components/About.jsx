@@ -21,7 +21,7 @@ function About({ title, description, highlights, education }) {
         </div>
 
         <div className="education-section">
-          <p className="section-label">Education</p>
+          <p className="section-label">학력</p>
           <div className="education-list">
             {education.map((item) => (
               <article className="education-item" key={`${item.school}-${item.degree}`}>

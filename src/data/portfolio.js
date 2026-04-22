@@ -1,7 +1,7 @@
 export const portfolioData = {
   hero: {
     name: '정진화',
-    title: 'AI/ML Engineer',
+    title: 'AI/ML 엔지니어',
     tagline: 'From abstraction to application, built on strong fundamentals.',
     subtagline: '',
     intro:
@@ -10,16 +10,25 @@ export const portfolioData = {
     githubUrl: 'https://github.com/jhjeong-lab',
     backgroundImage:
       'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80',
-    badges: ['RAG Systems', 'AI Agents', 'LLM Engineering', 'Model Optimization', 'Research'],
+    badges: ['AI 시스템 설계', 'AI Agent', 'LLM', 'Research Engineering'],
   },
   about: {
-    title: '도메인을 이해하고, 방법론을 선택하고, 직접 구현합니다.',
+    title: '도메인을 이해하고, 방법론을 선택하고, 설계·구현합니다.',
     description:
       'AI/ML 엔지니어로서 LLM Agent, 모델 경량화, RAG 같은 주제를 설계하고 구현해왔습니다. 수학 전공에서 온 구조적 사고와 분석 훈련이 문제 정의와 방법론 선택에 기반이 되어주며, 프로젝트에서는 아키텍처 설계부터 모델·파이프라인 구현, 실험과 검증까지 엔드 투 엔드로 기여합니다.',
     highlights: [
-      { label: '관심 분야', value: 'AI Agent Systems, Foundation Models, ML Engineering' },
-      { label: '강점', value: '문제 정의부터 모델 구현과 검증까지 엔드 투 엔드로 수행하는 실행력' },
-      { label: '지향점', value: '연구의 엄밀함과 제품의 실용성 사이를 잇는 엔지니어링' },
+      {
+        label: '관심 분야',
+        value: 'AI Agent Systems, Foundation Models, ML Engineering',
+      },
+      {
+        label: '강점',
+        value: '문제의 핵심을 빠르게 파악하고, 적절한 방식으로 끝까지 구현',
+      },
+      {
+        label: '지향점',
+        value: '연구의 엄밀함과 제품의 실용성 사이를 잇는 엔지니어링',
+      },
     ],
     education: [
       {
@@ -40,12 +49,14 @@ export const portfolioData = {
     'Python',
     'MATLAB',
     'SQL',
-    'PyTorch',
+    'Transformers',
     'Hugging Face',
     'LangChain',
     'FastAPI',
-    'vLLM',
     'Vector DB',
+    'RAG',
+    'vLLM',
+    'TDA',
   ],
   projects: [
     {
@@ -56,7 +67,7 @@ export const portfolioData = {
       period: '2025.11 - 2025.12',
       team: '6인 팀 프로젝트',
       myRole:
-        'AI 서비스 아키텍처 설계, Vector DB 및 임베딩 파이프라인 설계, RAG + LangChain Agent 기반 이슈 생성 워크플로우 설계, 프롬프트 전략 수립.',
+        'AI 서비스 아키텍처 설계, Vector DB 및 임베딩 파이프라인 설계, RAG 파이프라인 구현, 프롬프트 전략 수립, Data, API 흐름 정리.',
       href: null,
       background: [
         'ESG 공시 의무화 확대로 기업 ESG 경영관리팀의 업무 부담이 증가하고 있습니다.',
@@ -65,87 +76,84 @@ export const portfolioData = {
       problems: [
         'ESG 표준, 뉴스, 내부 문서, 벤치마킹 데이터가 산개되어 있어 이슈 도출을 위한 통합 검색이 불가능했습니다.',
         '이슈 도출 → 설문 → 중대성 평가 → 리포트 작성까지 전 과정이 수동이었습니다.',
-        '이슈 생성 근거가 불명확해 보고서 신뢰성에 대한 의문이 존재했습니다.',
+        '결과에 어떤 문서가 근거가 되었는지 남지 않으면 실무 신뢰성이 떨어졌습니다.',
+        'Frontend, Spring Boot, AI 서비스가 병렬로 개발되는 상황에서 호출 순서와 데이터 형식이 어긋날 위험이 컸습니다.',
       ],
       solutions: [
         'FastAPI 기반 AI 서비스 아키텍처를 설계했습니다.',
-        'Qdrant Vector DB 구조를 설계하고 ESG 문서 임베딩 파이프라인을 구축했습니다.',
-        'RAG와 LangChain Agent를 결합한 이슈 생성 워크플로우를 설계했습니다.',
-        '이슈 출처와 근거 텍스트를 명시하는 프롬프트 전략을 수립해 결과의 설명 가능성을 확보했습니다.',
-        'Spring Boot ↔ FastAPI 간 내부 API 연계 구조를 정의했습니다.',
+        'ESG 문서 유형별 Qdrant 컬렉션 분리 설계와 메타데이터 구조를 구성했습니다.',
+        '이슈 생성, 보고서 초안, 챗봇에 공통으로 쓰이는 RAG 파이프라인을 구현했습니다.',
+        '데이터 흐름과 API 명세를 정리해 팀 간 인터페이스를 같은 흐름으로 맞췄습니다.',
+        '근거 텍스트와 출처가 함께 남도록 프롬프트 형식을 설계했습니다.',
       ],
       results: [
         '이슈풀 생성 프로세스 2~6주 → 5분, 리포트 초안 1~2개월 → 5분으로 단축 (기대효과 기준).',
         'ESG 이슈 도출부터 보고서 생성까지 이어지는 End-to-End AI 파이프라인을 완성했습니다.',
-        '이슈별 근거 출처를 명시하는 프롬프트 전략으로 결과의 설명 가능성을 확보했습니다.',
+        '이슈별 근거 텍스트와 출처를 함께 남기는 구조를 설계했습니다.',
         'RAG 챗봇으로 이해관계자 외부 질의에 즉시 대응 가능한 구조를 마련했습니다.',
+        '단일 기능 추가보다 서비스 흐름과 시스템 경계를 먼저 맞추는 것이 실무 AI 시스템에서 중요하다는 점을 확인했습니다.',
       ],
       stack: ['Python', 'FastAPI', 'Qdrant', 'SQL', 'RAG', 'LangChain'],
-    },
-    {
-      name: 'LG Aimers 8기',
-      title: '모델 경량화 온라인 해커톤',
-      summary:
-        'EXAONE-4.0-1.2B 모델을 대상으로 경량화 이후 성능 회복 전략을 실험하고, vLLM 추론 환경의 제약을 고려한 최적화 방향을 탐색했습니다.',
-      period: '2026.02.02 - 2026.02.26',
-      team: '5인 팀 프로젝트',
-      myRole:
-        'Recovery Fine-tuning과 Knowledge Distillation 실험 설계 및 수행, vLLM 환경에서의 성능 저하 원인 분석.',
-      href: null,
-      background: [
-        'EXAONE-4.0-1.2B 모델을 대상으로 경량화를 수행하는 해커톤이었습니다.',
-      ],
-      problems: [
-        '원본 모델 대비 크기, 추론 속도, 성능 간의 균형을 고려한 최적화가 필요했습니다.',
-        'vLLM 추론 환경에서 실제로 적용 가능한 방법만 활용해야 했습니다.',
-        'Quantization, Pruning, Knowledge Distillation, Fine-tuning 등의 기법을 조합해 현실적인 전략을 설계해야 했습니다.',
-      ],
-      solutions: [
-        '경량화 이후 손실된 성능을 복구하기 위한 방법론을 중심으로 실험을 설계했습니다.',
-        '다양한 데이터를 활용한 Recovery Fine-tuning을 적용했습니다.',
-        'Knowledge Distillation을 적용해 성능 회복 가능성을 비교했습니다.',
-      ],
-      results: [
-        'Recovery Fine-tuning이 Quantization 후 성능 저하 복구에 유효함을 실험으로 확인했습니다.',
-        'KD 적용 후 PPL은 개선됐지만 downstream task 성능은 저하되었고, 이를 vLLM 환경의 메모리 효율 감소 관점에서 분석했습니다.',
-        '단순 적용이 아닌 추론 환경 제약을 고려한 경량화 전략 설계 경험을 확보했습니다.',
-      ],
-      stack: ['Python', 'Transformers', 'Hugging Face', 'vLLM'],
     },
     {
       name: '학위논문',
       title: 'A Survey of Topological Methods for Analyzing Dynamic Brain Network',
       summary:
-        '시간에 따라 변하는 뇌 네트워크를 위상적 방법으로 분석하기 위해 Persistence Vineyard와 Dynamic TDA의 가능성과 한계를 비교하고, 직접 구현과 통계 검증까지 수행했습니다.',
+        '동적으로 변하는 뇌 네트워크라는 도메인 문제에 TDA 방법론을 적용해, Persistence Vineyard와 Dynamic TDA를 각각 실험하고 실제 데이터에서 설명력과 한계를 확인한 연구 프로젝트입니다.',
       period: '2024 - 2025',
       team: '개인 연구',
-      myRole:
-        'EEG 전처리 및 vineyard 추적 알고리즘 설계·구현, fMRI 기반 dynamic embedding 및 ratio statistic 정의, 순열검정 기반 통계 검증까지 단독 수행.',
+      myRole: '설계 및 구현, 방법론 적용 및 해석.',
       href: null,
       background: [
-        'fMRI와 EEG 같은 신경 신호는 본질적으로 시간에 따라 변화하며, 이를 정적으로만 다루면 구조 변화를 포착하기 어렵습니다.',
-        '기존 graph theory, SPM, ICA 기반 접근은 정적 표현 또는 단일 스케일 분석에 그쳐 위상적 구조 변화를 포착하기 어려웠습니다.',
+        'fMRI와 EEG는 시간에 따라 구조가 바뀌는 데이터라 정적 분석만으로는 변화를 설명하기 어렵습니다.',
+        '핵심 질문은 동적 뇌 네트워크라는 도메인 문제를 TDA 방법론으로 실제로 설명할 수 있는가였습니다.',
       ],
       problems: [
-        '시간대별로 생성되는 위상적 특성(persistence diagram)을 어떻게 연결하고 집단 간 차이를 검증할 것인지 정의해야 했습니다.',
-        'Persistence Vineyard와 Dynamic TDA의 이론적 가능성과 실제 구현 가능성 사이의 간극을 확인해야 했습니다.',
+        '동적 특성을 다룰 수 있는 TDA 방법론이 실제 데이터에서 무엇을 설명할 수 있는지 직접 확인해야 했습니다.',
+        '시간에 따른 구조 변화 추적과 집단 간 차이 검증을 각각 어떤 방식으로 해석할지 정리해야 했습니다.',
+        '방법론의 수학적 정의를 실제 데이터 파이프라인과 검증 절차로 연결해야 했습니다.',
       ],
       solutions: [
-        '[Persistence Vineyard / EEG] 공개 구현체 부재로 Cohen-Steiner et al.(2006) 알고리즘 대신 Hungarian algorithm 기반 heuristic matching을 설계하고 Python으로 구현했습니다.',
-        '[Persistence Vineyard / EEG] Notch filter, Butterworth bandpass(0.5~45Hz), ICA artifact removal을 포함한 EEG 전처리 파이프라인을 직접 구성했습니다.',
-        '[Persistence Vineyard / EEG] 30초 슬라이딩 윈도우(2초 step) 기반 15×15 distance matrix에서 0D/1D vineyard와 bottleneck distance 시계열을 도출했습니다.',
-        '[Persistence Vineyard / EEG] heuristic matching의 구조적 한계(state transition 추적 불가, bottleneck distance의 질적 구분 불가)를 실험적으로 확인하고 분석했습니다.',
-        '[Dynamic TDA / fMRI] HCP 데이터(116 ROI, 6,670차원 correlation vector)에 dynamic embedding을 적용했습니다.',
-        '[Dynamic TDA / fMRI] birth-death decomposition 기반 Wasserstein distance를 정의하고 20×20 pairwise distance matrix를 구성했습니다.',
-        '[Dynamic TDA / fMRI] Wasserstein distance 기반 ratio statistic λ를 정의하고 순열검정 10,000회로 집단 간 위상적 차이를 통계적으로 검증했습니다.',
+        'Persistence Vineyard와 Dynamic TDA를 각각 구현하고 실제 EEG, fMRI 데이터에 적용했습니다.',
+        'EEG에서는 시간에 따른 위상 구조 변화 추적 가능성을, fMRI에서는 집단 간 위상 차이 설명 가능성을 확인했습니다.',
+        'Dynamic TDA / fMRI에는 순열검정 기반 통계 검증을 설계해 결과를 해석했습니다.',
+        '두 방법론을 각각 실험한 뒤 실제 데이터에서 드러난 설명력과 한계를 비교했습니다.',
       ],
       results: [
-        '남녀 집단 간 위상적 차이 통계 검증: ratio statistic 1.1610, p-value 0.0401.',
-        'Window size 40으로 축소 시 p-value 0.0700으로 상승, 방법론의 window size 민감도 한계를 실험적으로 확인·분석했습니다.',
-        'Persistence Vineyard는 이론적으로 강력하지만 구현 난이도가 높고, Dynamic TDA는 통계 검증에 유효하나 파라미터 의존성이 있음을 실증했습니다.',
-        '두 접근법의 실용적 한계와 장단점을 비교·정리한 가이드라인을 제시했습니다.',
+        'Dynamic TDA / fMRI 실험에서 λ = 1.1610, p-value = 0.0401을 확인했습니다.',
+        'Window size 변화에 따라 결과가 달라지는 점을 통해 방법론의 민감도와 적용 조건을 해석했습니다.',
+        'Persistence Vineyard와 Dynamic TDA 모두 동적성을 다룰 수 있지만, 실제 설명력과 한계는 다르게 나타남을 확인했습니다.',
+        '구현 자체보다 방법론을 도메인 데이터에 적용해 해석 가능한 결과로 연결하는 일이 핵심임을 정리했습니다.',
       ],
       stack: ['Python', 'MATLAB', 'TDA', 'Persistent Homology'],
+    },
+    {
+      name: 'LG Aimers 8기',
+      title: '모델 경량화 온라인 해커톤',
+      summary:
+        'EXAONE-4.0-1.2B 모델을 대상으로 경량화 이후 성능 회복 전략을 실험하고, vLLM 추론 환경을 고려한 최적화 방향을 탐색했습니다.',
+      period: '2026.02.02 - 2026.02.26',
+      team: '5인 팀 프로젝트',
+      myRole: 'Recovery Fine-tuning 실험 설계 및 수행, Knowledge Distillation 비교 실험, 성능 불일치 분석.',
+      href: null,
+      background: ['EXAONE-4.0-1.2B 모델을 대상으로 경량화를 수행하는 해커톤이었습니다.'],
+      problems: [
+        '원본 모델 대비 크기, 속도, 성능 사이의 균형을 고려해야 했습니다.',
+        '특정 추론 환경 안에서 실제로 적용 가능한 방법만 검토해야 했습니다.',
+        'Quantization 이후 손실된 성능을 어떤 방식으로 회복할지 비교가 필요했습니다.',
+      ],
+      solutions: [
+        '경량화 이후 손실된 성능을 복구하기 위한 방법론을 중심으로 실험을 설계했습니다',
+        '다양한 데이터 기반 Recovery Fine-tuning을 적용했습니다.',
+        'Knowledge Distillation을 함께 비교해 회복 전략의 차이를 검토했습니다.',
+        'PPL과 downstream task 성능을 분리해서 해석했습니다.',
+      ],
+      results: [
+        'Recovery Fine-tuning이 경량화 이후 성능 저하 복구에 유효함을 확인했습니다.',
+        'Knowledge Distillation은 PPL 개선에도 downstream task 성능이 저하될 수 있음을 확인했습니다.',
+        '제출 과정에서 라이브러리와 패키지 제약, 모델 config 호환성 문제를 겪으며 경량화 전략은 지표뿐 아니라 실제 추론 환경과 함께 해석해야 함을 배웠습니다.',
+      ],
+      stack: ['Python', 'Transformers', 'Hugging Face', 'vLLM'],
     },
     {
       name: '2024 Fall Prompt Engineering Final Project',
@@ -155,30 +163,32 @@ export const portfolioData = {
       period: '2024.11.23 - 2024.12.23',
       team: '3인 팀 프로젝트',
       myRole:
-        'Query decomposition 기반 Multi-step Reasoning Agent 설계 및 구현 주도, 금융 수치 계산 전용 Tool 분리 설계.',
+        'Vector DB 및 임베딩 파이프라인 설계, 테이블 자연어 변환 로직 설계, Query Routing 전략 설계, Multi-step Reasoning Agent 구현 주도, 금융 계산 Tool 구현.',
       href: null,
       background: [
-        '금융 문서 기반 복합 질의응답을 처리하는 LLM Agent 시스템 설계·구현 프로젝트였습니다.',
-        '단순 RAG만으로는 계산, 비교, 시간 정렬이 동시에 필요한 복합 재무 질의를 처리하기 어려웠습니다.',
+        '금융 문서 기반 복합 질의응답을 처리하는 Agentic RAG 시스템 설계·구현 프로젝트였습니다.',
+        '계산, 비교, 시간 정렬이 함께 필요한 질의는 단순 검색-생성으로 처리하기 어려웠습니다.',
       ],
       problems: [
-        '단순 RAG는 복합 재무 질의(계산·비교·시간 정렬)에서 실패했습니다.',
-        '모든 질의를 단일 파이프라인으로 처리하면 단순 질의에는 과도한 처리가, 복합 질의에는 처리 부족이 발생했습니다.',
-        'LLM의 직접 수치 계산은 반올림 오류와 단위 혼용 등 금융 신뢰도 문제를 일으켰습니다.',
+        '청킹, 임베딩, Top-K를 조정해도 단순 RAG는 복합 재무 질의에서 계속 실패했습니다.',
+        '모든 질의를 하나의 파이프라인으로 처리하면 단순 질의에는 과도하고 복합 질의에는 구조적으로 부족했습니다.',
+        '재무 정보의 핵심이 테이블에 있어, 표 형태 그대로는 검색 품질이 충분히 나오지 않았습니다.',
+        '금융 질의는 중간값을 먼저 찾고 계산한 뒤 최종 지표로 이어지는 단계적 구조를 가져 LLM 직접 계산만으로는 신뢰성이 낮았습니다.',
       ],
       solutions: [
-        '질의를 단순 조회 / 계산 중심 / 다단계 추론의 세 유형으로 분류하는 Query Routing 전략을 설계했습니다.',
-        'Query decomposition 기반 Multi-step Reasoning Agent를 설계하고 구현을 주도했습니다.',
-        '복잡한 질의를 순차적 하위 질의로 분해해 각 단계 출력을 Context로 축적하여 다음 단계에 전달하는 구조를 만들었습니다.',
-        '각 단계를 독립적으로 검증 가능하도록 설계해 단계별 디버깅 용이성을 확보했습니다.',
-        '금융 수치 계산 전용 Tool을 별도 구현해 LLM은 Tool 호출 판단만, 계산은 Tool이 담당하도록 분리했습니다.',
+        '질의를 단순 조회, 계산 중심, 다단계 추론으로 나누는 Query Routing 전략을 설계했습니다.',
+        'Query decomposition 기반 Multi-step Reasoning Agent를 구현해 단계별 출력을 다음 컨텍스트로 누적했습니다.',
+        '재무 테이블을 자연어 문장으로 변환해 검색 가능한 형태로 다시 구성했습니다.',
+        '회사명, 회계연도 등 메타데이터 필터와 시맨틱 검색을 함께 사용했습니다.',
+        '계산은 금융 계산 Tool이 맡고, LLM은 어떤 정보를 먼저 구하고 어떤 Tool을 호출할지 판단하도록 역할을 분리했습니다.',
       ],
       results: [
-        '복합 재무 질의를 다단계 추론으로 처리하는 LLM Agent 시스템을 완성했습니다.',
-        '질의 유형별 라우팅으로 단순 RAG 대비 복합 질의 처리 정확도를 향상시켰습니다.',
-        '금융 수치 계산 전용 Tool 분리로 LLM 직접 계산에서 발생하던 오류 문제를 해결했습니다.',
+        '복합 재무 질의를 다단계 추론으로 처리하는 Agentic RAG 구조를 구현했습니다.',
+        '질의 유형별 라우팅과 Tool 분리로 단순 조회와 복합 질의를 서로 다른 경로로 안정적으로 처리할 수 있게 했습니다.',
+        '중간값 계산과 최종 계산을 분리해 금융 질의의 계산 경로를 추적 가능한 형태로 만들었습니다.',
+        '테이블 자연어 변환과 메타데이터 기반 검색으로 재무 문서 검색 가능성을 높였습니다.',
       ],
-      stack: ['Python', 'LangChain', 'RAG', 'AI Agent'],
+      stack: ['Python', 'LangChain', 'RAG', 'AI Agent', 'VectorDB'],
     },
   ],
   trainings: [

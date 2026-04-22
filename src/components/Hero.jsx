@@ -2,14 +2,14 @@ function Hero({ name, title, intro, githubUrl, badges, email, tagline, subtaglin
   return (
     <section className="hero" id="top">
       <div className="hero-copy">
-        <p className="eyebrow">Portfolio</p>
+        <p className="eyebrow">포트폴리오</p>
         <div className="hero-layout">
           <div className="hero-main">
             <p className="hero-tagline">{tagline}</p>
             <h1>{name}</h1>
             <p className="hero-title">{title}</p>
             <p className="hero-intro">{intro}</p>
-            <p className="hero-subtagline">{subtagline}</p>
+            {subtagline ? <p className="hero-subtagline">{subtagline}</p> : null}
 
             <div className="hero-actions">
               <a className="primary-link" href="#projects">
@@ -46,7 +46,7 @@ function Hero({ name, title, intro, githubUrl, badges, email, tagline, subtaglin
               </dl>
             </div>
 
-            <div className="hero-badges" aria-label="Focus areas">
+            <div className="hero-badges" aria-label="핵심 키워드">
               {badges.map((badge) => (
                 <span key={badge}>{badge}</span>
               ))}
