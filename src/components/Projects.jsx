@@ -4,9 +4,9 @@ function Projects({ items }) {
       <div className="section-layout">
         <div className="section-copy">
           <p className="section-label">프로젝트</p>
-          <h2>주요 프로젝트</h2>
           <p className="section-description">
-            문제 구조를 다시 정의하고, 시스템 설계와 실험 검증으로 풀어낸 작업을 정리했습니다.
+            {/* 문제 구조를 다시 정의하고, 시스템 설계와 실험 검증으로 풀어낸 작업을 정리했습니다. */}
+            그동안 진행한 프로젝트입니다.
           </p>
         </div>
 
@@ -29,6 +29,13 @@ function Projects({ items }) {
                 <p className="project-meta">
                   {project.period} | {project.team}
                 </p>
+
+                <ul className="tag-list" aria-label={`${project.title} stack`}>
+                  {project.stack.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+
                 <p>{project.summary}</p>
 
                 {project.myRole ? (
@@ -49,21 +56,15 @@ function Projects({ items }) {
                   </div>
 
                   <div className="project-section">
-                    <h4>문제정의</h4>
-                    <ul>
-                      {project.problems.map((item) => (
-                        <li key={item}>{item}</li>
+                    <h4>핵심 이슈</h4>
+                    <div className="project-issue-list">
+                      {project.issues.map((issue) => (
+                        <div className="project-issue" key={issue.problem}>
+                          <p className="project-issue__problem">{issue.problem}</p>
+                          <p className="project-issue__solution">{issue.solution}</p>
+                        </div>
                       ))}
-                    </ul>
-                  </div>
-
-                  <div className="project-section">
-                    <h4>솔루션</h4>
-                    <ul>
-                      {project.solutions.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
+                    </div>
                   </div>
 
                   <div className="project-section">
@@ -75,12 +76,6 @@ function Projects({ items }) {
                     </ul>
                   </div>
                 </div>
-
-                <ul className="tag-list" aria-label={`${project.title} stack`}>
-                  {project.stack.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
               </div>
             </article>
           ))}

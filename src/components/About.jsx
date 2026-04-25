@@ -4,7 +4,7 @@ function About({ title, description, highlights, education }) {
       <div className="about-intro">
         <div className="about-heading">
           <p className="section-label">자기소개</p>
-          <h2>{title}</h2>
+          <p className="section-description about-title">{title}</p>
         </div>
 
         <p className="about-description">{description}</p>

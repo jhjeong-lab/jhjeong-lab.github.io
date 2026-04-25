@@ -6,7 +6,6 @@ function Training({ items }) {
       <div className="section-layout">
         <div className="section-copy">
           <p className="section-label">트레이닝</p>
-          <h2>교육 이력</h2>
           <p className="section-description">
             실무 과제 중심으로 참여한 공식 AI/ML 교육 과정입니다.
           </p>
